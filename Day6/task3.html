@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Use checkboxes for multiple choices, radio buttons for single choice, and number fields for numeric input.-->
+    <fieldset>
+        <legend>Form</legend>
+    <form action="" method="">
+        <label for="ID">ID</label>
+        <input type="number" name="ID" id="ID" placeholder="Enter your ID" required>
+        <br><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="gender" name="gender" value="male">
+        <label for="gender">Male</label>
+        <input type="radio" id="gender" name="gender" value="female">
+        <label for="gender">Female</label>
+        <br><br>
+        <label for="Hobbies">Hobbies:</label>
+        <input type="checkbox" name="Hobbies" id="Hobbies" value="Reading">
+        <label for="Hobbies">Reading</label>
+        <input type="checkbox" name="Hobbies" id="Hobbies" value="Traveling">
+        <label for="Hobbies">Traveling</label>
+        <input type="checkbox" name="Hobbies" id="Hobbies" value="Cooking">
+        <label for="Hobbies">Cooking</label>
+        <input type="checkbox" name="Hobbies" id="Hobbies" value="Sports">
+        <label for="Hobbies">Sports</label>
+        <br><br>
+
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="age" min="22" max="60" placeholder="Age" required>
+        <br><br>
+
+        <label for="Experience">Experience (in years):</label>
+        <input type="number" id="Experience" name="Experience" min="5" max="15" placeholder="Enter your experience in years" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </fieldset>
+</body>
+</html>
