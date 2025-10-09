@@ -1,0 +1,15 @@
+h1,h2,h3
+{
+    background-color: rgb(30, 180, 105);
+    color: rgb(3, 3, 3);
+    border-radius: 15px;
+    border: 5px solid rgb(255, 0, 0);
+    text-align: center;
+    
+
+}
+u{
+    background-color: orange;
+    color: black;
+    border: 3px solid blue;
+}
