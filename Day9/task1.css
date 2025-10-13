@@ -1,0 +1,17 @@
+.task1{
+    width: 200px;
+    height: 150px;
+    border: 5px solid rgb(241, 13, 13);
+    background-color: aqua;
+    padding: 30px;
+    margin: 30px;
+    margin-left: 40%;
+
+    
+}
+.add{
+    background-color: green;
+    border-radius: 200px;
+    color: yellow;
+    padding: 70px;
+}

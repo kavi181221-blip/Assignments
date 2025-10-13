@@ -1,0 +1,12 @@
+.task1{
+    background-color: blueviolet;
+    color: red;
+    border: 3px solid rgb(243, 240, 245);
+    margin: 10px;
+}
+.task2{
+    background-color: gray;
+    color: rgb(10, 243, 10);
+    border: 3px solid orange;
+    margin: 40px;
+}

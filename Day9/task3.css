@@ -1,0 +1,13 @@
+.box3{
+    background-color: gray;
+    color: red;
+    border: 5px solid green;
+    padding: 40px;
+}
+.box4
+{
+    background-color: yellowgreen;
+    color:blue;
+    border: 5px solid palevioletred;
+    padding: 60px;
+}

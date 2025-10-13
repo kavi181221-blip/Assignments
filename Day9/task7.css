@@ -1,0 +1,47 @@
+.price
+{
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+   gap: 40px;
+
+}
+h1
+{
+    text-align: center;
+    color: blue;
+    border-radius: 50%;
+    background-color: gainsboro ;
+}
+.plan{
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.basic{
+    background-color: gray;
+    color: gold;
+    border: 5px solid greenyellow;
+}
+.stand{
+    background-color: cadetblue;
+    color: gold;
+    border: 5px double red;
+}
+.premium{
+    background-color:darkolivegreen;
+    color: gold;
+    border: 5px dashed blue;
+}
+u{
+    color: white;
+}
+.plan:hover{
+    border-radius: 50%;
+}
+h1:hover{
+    background-color: goldenrod;
+    color: orangered;
+    border-radius: 50%;
+}
