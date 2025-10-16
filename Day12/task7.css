@@ -1,0 +1,83 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "m l"
+        "k m"
+        'e p';
+    gap: 20px;
+    text-align: center;
+}
+
+.mobile {
+    background-color: gray;
+    border: 3px solid black;
+
+}
+
+.pendrive {
+    background-color: brown;
+    border: 3px solid black;
+
+}
+
+.keyboard {
+    background-color: salmon;
+    border: 3px solid black;
+
+}
+
+.earbuds {
+    background-color: gold;
+
+}
+
+.laptop {
+    background-color: aqua;
+    border: 3px solid black;
+
+}
+
+.mouse {
+    background-color: green;
+    border: 3px solid black;
+
+}
+
+.me {
+    height: 200px;
+    background-image: url(./download.jpeg);
+    color:gold  ;
+
+}
+
+.kb {
+    height: 200px;
+    background-image: url(./kb.jpeg);
+    color: gold;
+
+}
+
+.ms {
+    height: 200px;
+    background-image: url(./ms.jpeg);
+    color: gold;
+}
+
+.eb {
+    height: 200px;
+    background-image: url(./eb.jpeg);
+    color: gold;
+}
+
+.lt {
+    height: 200px;
+    background-image: url(./lt.jpeg);
+    color:gold;
+}
+
+.pd {
+    height: 200px;
+    background-image: url(./pd.png);
+    color: gold;
+}

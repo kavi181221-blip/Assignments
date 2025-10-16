@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 20%;
+    margin-left: 15%;
+    margin-top: 270px;
+    padding: 30px;
+    background-color: gray;
+    border-radius: 50%;
+}
+button{
+    background-color: salmon;
+    color: black;
+}
+button:hover{
+    background-color: red;
+    border-radius: 50%;
+}

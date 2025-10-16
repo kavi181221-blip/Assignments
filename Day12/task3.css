@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    background-color: burlywood;
+    justify-content: space-between;
+}
+.box{
+    width: 100px;
+    height: 500px;
+    text-align: center;
+    line-height: 100px;
+    padding: 5px;
+    margin: 10px;
+}
+.b1
+{
+    background-color: gray;
+    
+}
+.b2{
+    background-color: green;
+}
+.b3{
+    background-color: brown;
+}
+h1{
+    text-align: center;
+    border: 2px solid rgb(223, 16, 178);
+    background-color: cadetblue;
+}

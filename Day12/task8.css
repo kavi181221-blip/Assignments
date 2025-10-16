@@ -1,0 +1,47 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+    font-size: 30px;
+
+}
+header{
+    background-color: #008000;
+    color: white;
+
+}
+nav{
+    background-color: red;
+    color: white;
+}
+main{
+    background-color: gold;
+    background-color: blue;
+}
+aside{
+    background-color: rgb(134, 134, 123);
+    color: black;
+}
+footer{
+    background-color: salmon; 
+    background-color: green;
+}
+.header{
+    background-color: cadetblue;
+    color: gold;
+}
+.main
+{
+    background-color: brown;
+    color: white;
+}
+.side{
+    background-color: deeppink;
+    color: blue;
+}
+.footer{
+    background-color: darkred;
+    color: white;
+}
