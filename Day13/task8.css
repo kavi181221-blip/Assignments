@@ -1,0 +1,30 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    background:linear-gradient(to right,white,salmon);
+    flex-wrap: wrap;
+}
+.container div{
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(189, 129, 129);
+    color: blue;
+    border-radius: 50px;
+
+}
+.foot{
+    background-color: rgb(126, 117, 134);
+    color: white;
+}
+h1{
+    text-decoration: underline;
+    color: red;
+}
+p{
+    color: gold;
+    font-weight: bolder;
+}
+.py
+{
+    background-color: aquamarine;
+}

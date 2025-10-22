@@ -1,0 +1,101 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgreen;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+  
+flex-wrap:wrap;
+}
+.hero div{
+    padding: 20px;
+      background-color: lightblue;
+    color: rgb(255, 81, 0);
+    margin: 20px;
+    border-radius: 50px;
+    border: 5px solid green;
+}
+
+@media (max-width:600px){
+    .hero{
+        flex-direction: column;
+        text-align: center;
+
+    }
+}
+.ab{
+    text-align: center;
+
+}
+.ab h2{
+    background-color: greenyellow;
+    color: black;
+    font-weight: bolder;
+    border-radius: 50px;
+    display: inline;
+    line-height: 4;
+
+}
+img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50px;
+    border: 5px solid red;
+}
+.same{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: gray;
+    border-radius: 50px;
+    border: 5px dotted gold;
+}
+.ab{
+    background-color: salmon;
+    height: 250px;
+    width: 250px;
+    border-radius: 50px;
+}
+.Movies{
+    background-color: rgb(206, 41, 68);
+    text-align: center;
+    border-radius: 50px;
+    border: 10px dashed rgb(161, 189, 6);
+}
+.Movies h2{
+    text-decoration: underline;
+    background-color: white;
+    color: rgb(7, 201, 17);
+    display: inline;
+    border-radius: 50px;
+}
+.Movies p{
+    color: white;
+}
+.Bio{
+    background-color: salmon;
+    text-align: center;
+    border-radius: 50px;
+    border: 10px solid rgb(96, 9, 136)
+}
+.Bio h2{
+    text-decoration: underline;
+    background-color: rgb(19, 8, 8);
+    color: rgb(217, 233, 218);
+    display: inline;
+    border-radius: 50px;
+}
+.history{
+    background: linear-gradient(to right,red,yellow);
+    text-align: center;
+    border-radius: 50px;
+    border: 10px solid black;
+}
+.history h2{
+    text-decoration: underline;
+    background-color: aqua;
+    color: crimson;
+    display: inline;
+    border-radius: 50px;
+}

@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(18, 9, 145);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+h1{
+    background-color: gray;
+    color: green;
+    border-radius: 50px;
+}
+ul{
+    border: 10px solid gold;
+    border-radius: 50px;
+}
+@media (min-width:600px){
+    body{
+         background-color:green;
+    }
+   
+}
+@media (min-width:900px){
+    body{
+        background-color: red;
+    }
+}

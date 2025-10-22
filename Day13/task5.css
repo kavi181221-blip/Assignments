@@ -1,0 +1,31 @@
+
+body{
+    background: linear-gradient(to right,gray,salmon);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    
+}
+.box{
+    margin: 20px;
+    background-color:rgb(10, 196, 19);
+    color: rgb(24, 27, 240);
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 50px;
+    width: 150px;
+}
+@media (min-width:600px){
+    .container{
+        flex-direction: row;
+            justify-content: space-between;
+
+    }
+}
+.box:hover{
+    background-color: aquamarine;
+    color:brown;
+}
