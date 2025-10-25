@@ -1,0 +1,17 @@
+ body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #b35e5e;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 10px;
+      transition: 1s linear; 
+    }
+
+    img:hover {
+      transform: scale(1.2);
+    }

@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.color-box {
+    width: 150px;
+    height: 150px;
+    background-color: skyblue;
+    border-radius: 10px;
+    transition: background-color 1s ease;
+}
+
+.color-box:hover {
+    background-color: tomato;
+}

@@ -1,0 +1,35 @@
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .smooth-btn {
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;  
+      transition:transform 0.3s;
+      transition:box-shadow 0.3s;
+    }
+
+
+    .smooth-btn:hover {
+      background-color: #00b30f;
+      transform: scale(1.8);
+      box-shadow: 0 4px 12px rgba(214, 3, 3, 0.884);
+    }
+
+    .smooth-btn:focus {
+      outline: 3px solid #b5dd04;
+      outline-offset: 3px;
+    }
+  
