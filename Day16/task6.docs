@@ -1,0 +1,20 @@
+1.JavaScript was created in 1995 by Brendan Eich at Netscape.
+2.It was originally named Mocha, then LiveScript, and finally JavaScript.
+3.JavaScript is a high-level, interpreted programming language.
+4.It is one of the core web technologies along with HTML and CSS.
+5.JavaScript adds interactivity and dynamic behavior to web pages.
+6.The ECMAScript (ES) standard defines JavaScript’s rules and syntax.
+7.JavaScript supports object-oriented, functional, and event-driven programming styles.
+8.It runs in web browsers using engines like V8 (Chrome), SpiderMonkey (Firefox), and JavaScriptCore (Safari).
+9.Node.js allows JavaScript to run outside the browser on servers.
+10.ES6 (2015) introduced modern features like let, const, arrow functions, and classes.
+11.JavaScript supports asynchronous programming using promises, async/await, and callbacks.
+12.It can manipulate web pages using the DOM (Document Object Model).
+13.Popular JS frameworks and libraries include React, Angular, and Vue.js.
+14.JavaScript is prototype-based, meaning objects can inherit directly from other objects.
+15.It’s a loosely typed or dynamically typed language — variable types can change at runtime.
+16.JSON (JavaScript Object Notation) is a popular data format derived from JavaScript syntax.
+17.JavaScript handles events like mouse clicks, keypresses, and form submissions.
+18.It can be used for full-stack development — frontend (browser) and backend (Node.js).
+19.TypeScript is a superset of JavaScript that adds type safety and advanced features.
+20.JavaScript continues to evolve every year through ECMAScript updates, making it one of the most powerful and widely used programming languages in the world.

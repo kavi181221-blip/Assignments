@@ -1,0 +1,28 @@
+1. 1995 – The Birth of JavaScriptCreated by: Brendan Eich at Netscape.
+Originally called: Mocha, then LiveScript, finally renamed JavaScript for marketing reasons (to ride on Java’s popularity).
+Goal: Add interactivity to web pages (like pop-ups, form validation).
+Runs in browser only — no server-side usage yet.
+
+2. 1996–1999 – Standardization Begins
+Netscape submitted JavaScript to ECMA International to create a standard.
+The standard version is called ECMAScript.
+ECMAScript 1 (ES1) released in 1997 — first official version.
+ECMAScript 3 (ES3) in 1999 — introduced:
+try...catch error handling
+regular expressions
+better string handling
+This version became the foundation for years.
+
+3. 2000–2008 – Stagnation & Browser Wars
+Internet Explorer, Netscape, and others had incompatible JavaScript engines.
+Developers struggled with cross-browser bugs.
+AJAX (2005) appeared → allowed updating parts of web pages without reload → enabled apps like Gmail and Google Maps.
+This revived interest in JavaScript for building interactive web apps.
+
+4. 2009 – ECMAScript 5 (ES5)
+Released after 10 years of silence.
+Added major improvements:
+JSON support
+Array methods (forEach, map, filter, etc.)
+strict mode ("use strict";)
+Widely adopted by all browsers.

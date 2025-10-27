@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroZone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f3f4f6;
+      color: #1e1e1e;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: slideDown 1s ease-in-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffca28;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background-image: url('https://images.unsplash.com/photo-1510557880182-3eec1e6d24d1');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .hero button {
+      background-color: #ffca28;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .hero button:hover {
+      transform: scale(1.1);
+      background-color: #ffe082;
+    }
+
+    .products {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .products h2 {
+      font-size: 34px;
+      color: #0d47a1;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .items {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 220px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s, box-shadow 0.4s;
+      animation: popIn 0.8s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #e3f2fd;
+    }
+
+    .gallery h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #0d47a1;
+    }
+
+    .gallery-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery-images img {
+      width: 250px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .gallery-images img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      margin-top: 40px;
+      animation: slideUp 1s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ElectroZone</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to ElectroZone</h2>
+    <p>Your one-stop shop for the latest gadgets and electronics.</p>
+    <button>Shop Now</button>
+  </section>
+
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="items">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Laptop">
+        <h3>Laptop Pro X</h3>
+        <p>Powerful performance for professionals.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Smartphone">
+        <h3>Smartphone Max</h3>
+        <p>Stunning display and long battery life.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1580894742889-30f38f24a1e1" alt="Headphones">
+        <h3>Wireless Headphones</h3>
+        <p>Experience music without limits.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1616627987944-bc8ba0b41d2e" alt="Smartwatch">
+        <h3>Smartwatch Ultra</h3>
+        <p>Stay connected in style.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2>Our Tech Gallery</h2>
+    <div class="gallery-images">
+      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Headphones">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Laptop">
+      <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97" alt="Smartphone">
+      <img src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9" alt="Work Setup">
+      <img src="https://images.unsplash.com/photo-1606813902891-6c9e0e64f37c" alt="Tech Accessories">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 ElectroZone | Powered by Innovation ⚡</p>
+  </footer>
+</body>
+</html>
