@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        let user=prompt("Enter your Username");
+        let pass=prompt("Enter your Password");
+        let msg=document.getElementById("result");
+if(user==="admin"){
+    if(pass==="1234"){
+        msg.innerText="Welcome Admin"
+    }
+    else{
+        msg.innerText="Enter valid password";
+    }
+}
+    else{
+        msg.innerText="enter a valid Username";
+        
+    }
+        
+    
+    </script>
+</body>
+</html>

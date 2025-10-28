@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Favorite color response</h1>
+    <h2 id="message">Hi   How are Everyone This is for color response</h2>
+    <script>
+        let color=prompt("Your favorite color is?").toLowerCase();
+        let msg=document.getElementById("message");
+        switch (color){
+            case "red":
+            case "blue":
+            case "yellow":
+            case "pink":
+            case "gray":
+            case "purple":
+            case "orange":
+            case "green":
+            msg.style.color=color;
+                break;
+            default:
+                msg.innerText="Sorry i not recognized Your color";
+                msg.style.color="green";
+            
+        }
+    </script>
+</body>
+</html>

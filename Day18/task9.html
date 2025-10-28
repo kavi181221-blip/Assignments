@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="message"></h1>
+    <script>
+        let age = prompt("enter your age");
+        let subscript = prompt(" you are subscript yes /no ?").toLowerCase();
+        let result = document.getElementById("message");
+        if (age >= 18 && subscript === "yes") {
+            result.innerText = "welcome";
+            result.style.color = "white";
+            result.style.background = "green";
+        }
+        else {
+            result.innerText = "you are not subscripted";
+            result.style.color = "white";
+            result.style.background = "red";
+        }
+    </script>
+</body>
+
+</html>
