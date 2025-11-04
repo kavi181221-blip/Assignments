@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Fruits</h3>
+    <ul id="#fruitList"></ul>
+    <button onclick="addItem()">Add</button>
+    <script>
+        function addItem(){
+            let list=document.querySelector("#fruitList");
+            let fruits=["apple","orange","banana"];
+            fruits.forEach(function(fruit){
+                let li=document.createElement("li");
+                li.textContent=fruit;
+                list.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

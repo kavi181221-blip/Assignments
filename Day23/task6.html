@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dark{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body id="back">
+    <h1>Toggle</h1>
+    <p>To change a color using the Toggle</p>
+    <button onclick="changeColor()">Click</button>
+    <script>
+        function changeColor(){
+            document.getElementById("back").classList.toggle("dark");
+        }
+    </script>
+</body>
+</html>
