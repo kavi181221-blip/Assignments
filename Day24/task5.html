@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throw Error Example</title>
+</head>
+<body>
+  <input type="number" id="num" placeholder="Enter a number">
+  <button onclick="checkNumber()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    function checkNumber() {
+      const number = document.getElementById("num").value;
+
+      try {
+        if (number < 0) {
+          throw new Error("Number cannot be negative!");
+        }
+        document.getElementById("result").innerHTML = "Valid number: " + number;
+      } 
+      catch (error) {
+        document.getElementById("result").innerHTML = "Error: " + error.message;
+      }
+    }
+  </script>
+</body>
+</html>

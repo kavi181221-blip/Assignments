@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Login Form</h1>
+    <form id="login">
+        <label>Name:</label>
+        <input type="text" id="name"><br><br>
+        <label>Password:</label>
+        <input type="password" id="password"><br><br>
+        <button type="button" id="loginBtn">Login</button>
+        <p id="message"></p>
+        <script>
+            document.getElementById("loginBtn").addEventListener("click", function () {
+                try {
+                    let name = document.getElementById("name").value.trim();
+                    let password = document.getElementById("password").value.trim();
+                    if(name==="" || password===""){
+                        throw new Error("username and password cannot be empty")
+                    }
+                    if(name==="admin" || password==="1234")
+                    {
+                        document.getElementById("message").textContent="✅Login Successfully";
+                    }
+                    else{
+                        throw new Error("❌Invalid user name and password")
+                    }
+                }
+                catch (error){
+                    document.getElementById("message").textContent="Error:"+error.message;
+                }
+            });
+        </script>
+    </form>
+</body>
+
+</html>

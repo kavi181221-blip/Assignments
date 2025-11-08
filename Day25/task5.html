@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num">
+    <button onclick="number()">Check</button>
+    <p id="result"></p>
+    <script>
+        function number(){
+            try{
+                let num=parseFloat(document.getElementById("num").value);
+                if(isNaN(num)){
+                    throw new Error("Enter a valid number")
+                }
+                if(num<=0){
+                    throw new Error("Enter a possitive value")
+
+                }
+                if(num>100 ){
+                    throw new Error("Number is greater than 100")
+                }
+                document.getElementById("result").textContent="Number is acceptable";
+            }
+            catch (error){
+                document.getElementById("result").textContent="Error:"+error.message;
+            }
+        }
+    </script>
+</body>
+</html>

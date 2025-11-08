@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+</head>
+
+<body>
+    <h2>Simple Form Validation</h2>
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const result = document.getElementById("result");
+
+            try {
+                if (name.trim() === "") {
+                    throw new Error("Name cannot be empty.");
+                }
+
+                if (age === "" || age < 0) {
+                    throw new Error("Please enter a valid age.");
+                }
+
+                result.style.color = "green";
+                result.innerHTML = "Form submitted successfully!";
+            }
+            catch (error) {
+                result.style.color = "red";
+                result.innerHTML = "Error: " + error.message;
+            }
+        });
+    </script>
+</body>
+
+</html>

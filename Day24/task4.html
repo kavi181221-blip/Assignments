@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Try Catch Example</title>
+</head>
+<body>
+  <button onclick="runCode()">Run Code</button>
+  <p id="output"></p>
+  <script>
+    function runCode() {
+      try {
+        let result = undefinedVariable + 10; 
+        document.getElementById("output").innerHTML = result;
+      } 
+      catch (error) {
+        document.getElementById("output").innerHTML = "An error occurred: " + error.message;
+      }
+    }
+  </script>
+</body>
+</html>

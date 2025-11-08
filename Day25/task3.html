@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="text">
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+    <script>
+        function check(){
+            let num=parseFloat(document.getElementById("text").value);
+            try{
+                if(num<=0 || num===""){
+                        throw new Error("please enter a valid number and negative value not accepted")
+                }
+                document.getElementById("result").textContent="Number is Positive";
+            }
+            catch (error){
+                document.getElementById("result").textContent="Error:"+error.message
+            }
+        }
+    </script>
+</body>
+</html>

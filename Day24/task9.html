@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="text">Hi how are you</h2>
+    <button onclick="changeColor()">Changecolor</button>
+    <p id="result"></p>
+    <script>
+        function changeColor(){
+            try{
+            let text=document.getElementById("text");
+            if(!text){
+                throw new Error("Element Not Found")
+            }
+            text.style.color="red";
+            document.getElementById("result").textContent="Color Changed";
+        }
+        catch (error){
+            document.getElementById("result").textContent="Error"+error.Message;
+        }
+        }
+
+    </script>
+</body>
+</html>
