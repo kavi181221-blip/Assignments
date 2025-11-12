@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="login"></p>
+    <p id="repos"></p>
+    <script>
+        fetch("https://api.github.com/users/<your-username>")
+            .then(response=>response.json())
+            .then(data=>{
+                document.getElementById("login").textContent="login"+data.login;
+                document.getElementById("repos".textContent)="Public repos"+data.public_repos;
+            })
+            .catch(error=>{
+                    console.log("Error fetching"+error);
+                    
+            })
+        
+    </script>
+</body>
+</html>

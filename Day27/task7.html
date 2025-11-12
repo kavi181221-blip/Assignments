@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Followers Finder</title>
+</head>
+<body>
+  <h2>🔍 GitHub Followers Finder</h2>
+  <input type="text" id="username" placeholder="Enter GitHub username">
+  <button id="fetchBtn">Show Followers</button>
+
+  <ul id="followersList"></ul>
+
+  <script>
+    const button = document.getElementById("fetchBtn");
+    const followersList = document.getElementById("followersList");
+
+    button.addEventListener("click", async () => {
+      const username = document.getElementById("username").value.trim();
+      followersList.innerHTML = "";
+
+      if (!username) {
+        alert("Please enter a GitHub username!");
+        return;
+      }
+
+      followersList.innerHTML = "<li>Loading followers...</li>";
+
+      try {
+        const response = await fetch(`https://api.github.com/users/${username}/followers`);
+        
+        if (!response.ok) {
+          throw new Error(`User not found (Status: ${response.status})`);
+        }
+
+        const followers = await response.json();
+
+        followersList.innerHTML = "";
+
+        if (followers.length === 0) {
+          followersList.innerHTML = "<li>No followers found.</li>";
+          return;
+        }
+
+        followers.forEach(follower => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <img src="${follower.avatar_url}" alt="${follower.login}">
+            <a href="${follower.html_url}" target="_blank">${follower.login}</a>
+          `;
+          followersList.appendChild(li);
+        });
+      } 
+      catch (error) {
+        console.error("Error fetching followers:", error);
+        followersList.innerHTML = `<li style="color:red;">⚠️ ${error.message}</li>`;
+      }
+    });
+  </script>
+</body>
+</html>

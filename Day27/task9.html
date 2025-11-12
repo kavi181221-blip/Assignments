@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>GitHub Followers Finder — With Spinner</title>
+</head>
+<body>
+  <div class="card">
+    <h2>🔎 GitHub Followers Finder</h2>
+
+    <div class="controls">
+      <input id="username" type="text" placeholder="Enter GitHub username">
+      <button id="fetchBtn">Show Followers</button>
+    </div>
+
+    <div id="status" class="status"></div>
+    <div id="spinner" class="spinner"></div>
+    <ul id="followersList"></ul>
+  </div>
+
+  <script>
+    const usernameInput = document.getElementById('username');
+    const fetchBtn = document.getElementById('fetchBtn');
+    const statusEl = document.getElementById('status');
+    const followersList = document.getElementById('followersList');
+    const spinner = document.getElementById('spinner');
+
+    const githubUsernameRegex = /^(?!-)[A-Za-z0-9-]{1,39}(?<!-)$/;
+
+    function showStatus(message, type = '') {
+      statusEl.textContent = message;
+      statusEl.className = 'status' + (type ? ' ' + type : '');
+    }
+
+    function clearResults() {
+      followersList.innerHTML = '';
+    }
+
+    async function fetchFollowers(username) {
+      clearResults();
+      showStatus('');
+      spinner.style.display = 'block';
+      fetchBtn.disabled = true;
+
+      try {
+        const response = await fetch(`https://api.github.com/users/${encodeURIComponent(username)}/followers`);
+
+        if (!response.ok) {
+          if (response.status === 404) throw new Error('❌ User not found.');
+          if (response.status === 403) throw new Error('🚫 Rate limit reached. Try again later.');
+          throw new Error(`Error: ${response.statusText}`);
+        }
+
+        const followers = await response.json();
+
+        if (followers.length === 0) {
+          showStatus('No followers found for this user.', 'success');
+          return;
+        }
+
+        showStatus(`Found ${followers.length} follower(s):`, 'success');
+
+        followers.forEach(f => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <img src="${f.avatar_url}" alt="${f.login}'s avatar">
+            <a href="${f.html_url}" target="_blank">${f.login}</a>
+          `;
+          followersList.appendChild(li);
+        });
+
+      } catch (error) {
+        console.error('Error:', error);
+        showStatus(error.message, 'error');
+      } finally {
+        spinner.style.display = 'none';
+        fetchBtn.disabled = false;
+      }
+    }
+
+    fetchBtn.addEventListener('click', () => {
+      const username = usernameInput.value.trim();
+
+      if (!username) {
+        showStatus('⚠️ Please enter a GitHub username.', 'error');
+        clearResults();
+        return;
+      }
+      if (!githubUsernameRegex.test(username)) {
+        showStatus('⚠️ Invalid username format.', 'error');
+        clearResults();
+        return;
+      }
+
+      fetchFollowers(username);
+    });
+
+    usernameInput.addEventListener('keydown', e => {
+      if (e.key === 'Enter') fetchBtn.click();
+    });
+  </script>
+</body>
+</html>
