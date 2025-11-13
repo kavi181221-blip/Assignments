@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧠 Debug This Code - Mini Quiz</title>
+  
+</head>
+<body>
+
+  <h1>🧩 Debug This Code!</h1>
+  <p>Find and fix the bug in the following JavaScript snippet.</p>
+
+  <div class="quiz-box">
+    <pre id="buggyCode">
+
+    </pre>
+
+    <p><b>💡 Hint:</b> The function call is missing something!</p>
+
+    <input type="text" id="userAnswer" placeholder="Type your corrected line here... (e.g., console.log(addNumbers(5,5));)">
+    <br>
+    <button onclick="checkAnswer()">Check My Answer</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const answer = document.getElementById("userAnswer").value.trim();
+      const correct = "console.log(addNumbers(5,5));";
+
+      if (answer === correct) {
+        document.getElementById("result").innerHTML = "✅ Correct! The missing argument caused NaN.";
+        document.getElementById("result").style.color = "green";
+      } else if (answer === "") {
+        document.getElementById("result").innerHTML = "⚠️ Please enter your fix.";
+        document.getElementById("result").style.color = "orange";
+      } else {
+        document.getElementById("result").innerHTML = "❌ Not quite! Try again.";
+        document.getElementById("result").style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>

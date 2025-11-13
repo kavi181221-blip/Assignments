@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save Current Time in SessionStorage</title>
+</head>
+<body>
+  <h2>🕒 Current Session Time</h2>
+  <p id="timeDisplay"></p>
+
+  <script>
+    const currentTime = new Date().toLocaleTimeString();
+
+    console.log("Current time:", currentTime);
+
+    sessionStorage.setItem("sessionTime", currentTime);
+
+    const savedTime = sessionStorage.getItem("sessionTime");
+    document.getElementById("timeDisplay").innerHTML = `Session started at: <b>${savedTime}</b>`;
+  </script>
+</body>
+</html>

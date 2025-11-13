@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON.parse Example</title>
+</head>
+<body>
+  <script>
+    // Save an object to localStorage
+    const student = {
+      name: "Kavi",
+      course: "JavaScript",
+      score: 95
+    };
+
+    // Convert object to JSON and store it
+    localStorage.setItem("studentData", JSON.stringify(student));
+
+    // Retrieve the data (JSON string) from localStorage
+    const jsonData = localStorage.getItem("studentData");
+
+    // Convert JSON string back to object using JSON.parse()
+    const parsedData = JSON.parse(jsonData);
+
+    // Log the data
+    console.log(parsedData);
+    console.log("Name:", parsedData.name);
+    console.log("Course:", parsedData.course);
+    console.log("Score:", parsedData.score);
+  </script>
+</body>
+</html>

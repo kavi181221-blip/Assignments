@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Store Object in localStorage</title>
+</head>
+<body>
+  <h2>Save and Retrieve Object using localStorage</h2>
+
+  <button id="saveBtn">Save Object</button>
+  <button id="getBtn">Get Object</button>
+  <button id="clearBtn">Clear Storage</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    const user = {
+      name: "Kavi Balan",
+      course: "C# .NET MES Developer",
+      location: "India"
+    };
+
+    document.getElementById("saveBtn").addEventListener("click", function() {
+      const jsonData = JSON.stringify(user);
+      localStorage.setItem("userData", jsonData);
+      document.getElementById("output").innerText = "User object saved in localStorage!";
+    });
+
+    document.getElementById("getBtn").addEventListener("click", function() {
+      const storedData = localStorage.getItem("userData");
+      if (storedData) {
+        const parsedObject = JSON.parse(storedData); 
+        document.getElementById("output").innerText = 
+          `Name: ${parsedObject.name}\nCourse: ${parsedObject.course}\nLocation: ${parsedObject.location}`;
+      } else {
+        document.getElementById("output").innerText = "No data found in localStorage!";
+      }
+    });
+
+    document.getElementById("clearBtn").addEventListener("click", function() {
+      localStorage.clear();
+      document.getElementById("output").innerText = "localStorage cleared!";
+    });
+  </script>
+</body>
+</html>

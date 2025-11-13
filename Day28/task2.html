@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Session Storage Example</title>
+</head>
+<body>
+  <h2>Session Time Example using sessionStorage</h2>
+  <p id="timeDisplay"></p>
+
+  <script>
+    if (!sessionStorage.getItem("sessionStartTime")) {
+      const currentTime = new Date().toLocaleString();
+      sessionStorage.setItem("sessionStartTime", currentTime);
+    }
+
+    const storedTime = sessionStorage.getItem("sessionStartTime");
+    document.getElementById("timeDisplay").innerText =
+      "Your current session started at: " + storedTime;
+  </script>
+</body>
+</html>

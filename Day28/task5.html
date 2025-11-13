@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Console Experiment</title>
+</head>
+<body>
+  <h2>Open Chrome DevTools (Press F12) → Console tab</h2>
+
+  <script>
+    const students = [
+      { name: "Kavi", course: "C#", marks: 90 },
+      { name: "Bala", course: "JavaScript", marks: 85 },
+      { name: "Arjun", course: "Python", marks: 92 }
+    ];
+
+    console.log("Experiment started...");
+    console.log("Student data:", students);
+
+    console.table(students);
+
+    function calculateAverage(data) {
+      let total = 0;
+      for (let i = 0; i < data.length; i++) {
+        total += data[i].marks;
+
+        console.log(`Adding ${data[i].marks} marks`);
+      }
+      const avg = total / data.length;
+      return avg;
+    }
+
+    const averageMarks = calculateAverage(students);
+    console.log("Average Marks:", averageMarks);
+  </script>
+</body>
+</html>

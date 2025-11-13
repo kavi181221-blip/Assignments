@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LocalStorage Example</title>
+</head>
+<body>
+  <h2>Store and Retrieve Data using localStorage</h2>
+
+  <label for="name">Enter Name:</label>
+  <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+  <label for="course">Enter Course:</label>
+  <input type="text" id="course" placeholder="Enter your course"><br><br>
+
+  <button id="saveBtn">Save</button>
+  <button id="clearBtn">Clear</button>
+
+  <h3 id="output"></h3>
+
+  <script>
+   document.getElementById("saveBtn").addEventListener("click", function() {
+      const name = document.getElementById("name").value;
+      const course = document.getElementById("course").value;
+
+      localStorage.setItem("name", name);
+      localStorage.setItem("course", course);
+
+      displayData();
+    });
+
+    function displayData() {
+      const name = localStorage.getItem("name");
+      const course = localStorage.getItem("course");
+
+      if (name && course) {
+        document.getElementById("output").innerText = 
+          `Welcome ${name}! You are enrolled in ${course}.`;
+      }
+    }
+
+    window.addEventListener("load", displayData);
+
+    document.getElementById("clearBtn").addEventListener("click", function() {
+      localStorage.clear();
+      document.getElementById("output").innerText = "";
+    });
+  </script>
+</body>
+</html>

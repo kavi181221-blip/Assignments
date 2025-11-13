@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Get & Save User Location</title>
+
+</head>
+<body>
+  <h2>Find and Save My Location 🌍</h2>
+  
+  <button onclick="getLocation()">Get Location</button>
+  <button onclick="saveLocation()">Save Location</button>
+  
+  <div id="output"></div>
+
+  <script>
+    let currentLocation = {};
+
+    function getLocation() {
+      const output = document.getElementById("output");
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        output.innerHTML = "❌ Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+
+      currentLocation = { latitude, longitude };
+
+      document.getElementById("output").innerHTML = `
+        <b>Latitude:</b> ${latitude}<br>
+        <b>Longitude:</b> ${longitude}
+      `;
+    }
+
+    function showError(error) {
+      const output = document.getElementById("output");
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          output.innerHTML = "User denied the request for Geolocation.";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          output.innerHTML = "Location information is unavailable.";
+          break;
+        case error.TIMEOUT:
+          output.innerHTML = "The request to get user location timed out.";
+          break;
+        default:
+          output.innerHTML = "An unknown error occurred.";
+      }
+    }
+
+    function saveLocation() {
+      if (currentLocation.latitude && currentLocation.longitude) {
+        localStorage.setItem("userLocation", JSON.stringify(currentLocation));
+        alert("📍 Location saved successfully!");
+      } else {
+        alert("⚠️ Please get your location first.");
+      }
+    }
+
+    window.onload = function () {
+      const saved = localStorage.getItem("userLocation");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        document.getElementById("output").innerHTML = `
+          <b>Saved Location:</b><br>
+          Latitude: ${parsed.latitude}<br>
+          Longitude: ${parsed.longitude}
+        `;
+      }
+    };
+  </script>
+</body>
+</html>

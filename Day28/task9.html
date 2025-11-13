@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Messy JS Example</title>
+</head>
+<body>
+  <h2>Employee Salary Calculator</h2>
+
+  <input id="name" placeholder="Employee Name"><br><br>
+  <input id="hours" placeholder="Hours Worked"><br><br>
+  <input id="rate" placeholder="Hourly Rate"><br><br>
+  <button onclick="calculate()">Calculate Salary</button>
+
+  <p id="output"></p>
+
+  <script>
+    // ❌ Messy, unstructured code
+    function calculate() {
+      let name = document.getElementById("name").value;
+      let hours = parseFloat(document.getElementById("hours").value);
+      let rate = parseFloat(document.getElementById("rate").value);
+      let total = hours * rate;
+      let bonus;
+      if (hours > 160) {
+        bonus = total * 0.1;
+      } else {
+        bonus = 0;
+      }
+      let finalSalary = total + bonus;
+      document.getElementById("output").innerHTML = "Employee: " + name + "<br>Salary: ₹" + finalSalary;
+    }
+  </script>
+</body>
+</html>
