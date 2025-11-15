@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name content="width=device-width, initial-scale=1.0">
+    <title>Slide Notification Box</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .notification {
+            width: 350px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: absolute;
+            top: 20px;
+            display: none; 
+        }
+
+        .notification h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .closeBtn {
+            float: right;
+            cursor: pointer;
+            color: red;
+            font-size: 20px;
+            margin-top: -10px;
+        }
+
+        #notifyBtn {
+            padding: 12px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #notifyBtn:hover {
+            background: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button id="notifyBtn">Show Notification</button>
+
+    <div class="notification" id="notifBox">
+        <span class="closeBtn" id="closeNotif">&times;</span>
+        <h3>🔔 Notification</h3>
+        <p>This is a sliding notification box created using jQuery!</p>
+    </div>
+    <script>
+        $("#notifyBtn").click(function () {
+            $("#notifBox").slideDown(400);
+        });
+        $("#closeNotif").click(function () {
+            $("#notifBox").slideUp(400);
+        });
+    </script>
+
+</body>
+</html>

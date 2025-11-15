@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio with jQuery Effects</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        section {
+            padding: 80px 20px;
+            min-height: 60vh;
+            opacity: 0; 
+            transform: translateY(40px);
+            transition: 0.8s ease;
+        }
+
+        .fade-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        My Portfolio
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am a web developer who builds interactive and clean UI designs.</p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <p>HTML, CSS, JavaScript, jQuery, React, NodeJS</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here are some of my best works with animations and interactivity.</p>
+    </section>
+
+    <div class="btn-top" id="topBtn">Top ↑</div>
+
+    <script>
+        $(window).on("scroll", function () {
+            $("section").each(function () {
+                let sectionTop = $(this).offset().top;
+                let scrollTop = $(window).scrollTop();
+                let windowHeight = $(window).height();
+
+                if (scrollTop + windowHeight - 100 > sectionTop) {
+                    $(this).addClass("fade-visible");
+                }
+            });
+
+            if ($(window).scrollTop() > 200) {
+                $("#topBtn").fadeIn();
+            } else {
+                $("#topBtn").fadeOut();
+            }
+        });
+
+        $("#topBtn").click(function () {
+            $("html, body").animate({ scrollTop: 0 }, 600);
+        });
+
+        $(document).ready(function () {
+            $("#about").addClass("fade-visible");
+        });
+    </script>
+
+</body>
+</html>

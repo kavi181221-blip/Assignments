@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Slide Toggle Example</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <button id="slide">Slide up/down</button>
+  <br><br>
+  <div id="page" style="height: 300px;width: 200px;background-color: blue;display: none;">Hi kavi</div>
+  <script>
+    $("#slide").click(function(){
+      $("#page").slideToggle(500);
+    })
+  </script>
+</body>
+</html>

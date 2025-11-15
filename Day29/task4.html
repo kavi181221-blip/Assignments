@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <h2 id="title" style="color: red;">Hi how are you</h2>
+    <button id="change">Change color and text</button>
+    <script>
+        $("#change").click(function(){
+            $("#title").text("I am fine").css("color","green")   
+        })
+    </script>
+</body>
+</html>

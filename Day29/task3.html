@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Toggle Image Example</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h2>Toggle Image Using jQuery</h2>
+    <button id="toggleBtn">Show / Hide Image</button>
+    <br><br>
+    <img id="myImg" src="../Day10/nature.jpg" width="250" alt="Sample Image">
+    <script>
+       $("#toggleBtn").click(function(){
+        $("#myImg").toggle();
+       })
+    </script>
+</body>
+</html>
