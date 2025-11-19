@@ -1,0 +1,22 @@
+create database edu_platform;
+use edu_platform;
+create table assignments(student_id int primary key auto_increment,student_name varchar(50),subject_name varchar(50),assignment_mark int);
+select * from assignments;
+insert into assignments(student_id,student_name,subject_name,assignment_mark)values(101,"Kavi","Maths",20);
+insert into assignments(student_id,student_name,subject_name,assignment_mark)values(102,"seetha","Maths",20);
+insert into assignments(student_id,student_name,subject_name,assignment_mark)values(103,"nisha","Maths",18);
+insert into assignments(student_id,student_name,subject_name,assignment_mark)values(104,"Gayathri","Maths",17);
+insert into assignments(student_id,student_name,subject_name,assignment_mark)values(105,"Kanishka","Maths",16);
+alter table assignments add lesson_id int;
+update assignments set lesson_id=101 where student_id=101;
+update assignments set lesson_id=102 where student_id=102;
+update assignments set lesson_id=103 where student_id=103;
+update assignments set lesson_id=104 where student_id=104;
+update assignments set lesson_id=105 where student_id=105;
+
+create table lesson(lesson_id int primary key auto_increment,lesson_name varchar(50));
+insert into lesson(lesson_name)values("Maths");
+insert into lesson(lesson_name)values("Physics");
+select * from lesson;
+select a.student_id,a.student_name,a.assignment_mark,l.lesson_name from assignments a join lesson l on a.lesson_id=l.lesson_id where a.subject_name="Maths";
+alter table assignments add constraint fk_assignments_lesson foreign key(lesson_id) references lesson(lesson_id);
